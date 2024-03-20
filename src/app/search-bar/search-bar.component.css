@@ -1,3 +1,7 @@
 .border-color{
     border-color: #6C63FF;
 }
+input::placeholder {
+    color: #F7F7F7;
+  }
+  

@@ -6,7 +6,7 @@
     height: 37px;
     margin-left: -20%;
     padding: 5px;
-    width: 70%;
+    width: 100%;
     font-weight: bold ;
 }
 
@@ -14,4 +14,5 @@
     background-color: white;
     color: #6C63FF; 
     border-radius: 5px; 
+    border: none;
 }

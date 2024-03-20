@@ -2,7 +2,14 @@
 <div style="display: flex; justify-content: center; width:100%;">
     <app-search-bar (searchEvent)="performSearch($event)" style="width:50%;"></app-search-bar>
     <div style="display: flex; ">
-    <app-select-list></app-select-list>
-    <app-light-dark-mode style="margin-left: -20%;"></app-light-dark-mode>
-  </div>
-  </div>
+        <app-select-list (valueSelected)="receiveSelectedValue($event)"></app-select-list>
+        <app-light-dark-mode style="margin-left: -20%;" (modeChanged)="receiveModeFromChild($event)"></app-light-dark-mode>
+    </div>
+    
+</div>
+<div>
+  <app-todo-list style="justify-content: center;"></app-todo-list>
+</div>
+<div>
+  <app-add-button></app-add-button>
+</div>

@@ -17,7 +17,7 @@ export class LightDarkModeComponent {
     this.isDarkMode = !this.isDarkMode;
     const mode = this.isDarkMode ? 'dark' : 'light';
     this.modeChanged.emit(mode);
-    console.log(mode);
+    console.log('Selected value from child:', mode);
 
     
   }

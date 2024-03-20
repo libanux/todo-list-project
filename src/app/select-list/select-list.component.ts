@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -9,16 +9,17 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './select-list.component.css'
 })
 export class SelectListComponent {
-   selectedValue?: string= 'ALL';
+  selectedValue?: string= 'ALL';
   options = [
     { value: 'complete', label: 'Complete' },
     { value: 'incomplete', label: 'Incomplete' }
   ];
 
+  @Output() valueSelected = new EventEmitter<string>();
   onSelectionChange(event: any) {
     this.selectedValue = event.target.value;
+    this.valueSelected.emit(this.selectedValue);
     console.log('Selected value from child:', this.selectedValue );
- 
   }
 
 }
