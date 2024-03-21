@@ -1,0 +1,10 @@
+
+<div class="">
+<select class="custom-select" [(ngModel)]="selectedValue" (change)="onSelectionChange($event)">
+    <option selected>ALL</option>
+    @for (option of options; track $index) {
+        <option [value]="option.value">{{ option.label }}</option>
+    }
+
+</select>
+</div>

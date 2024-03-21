@@ -1,0 +1,11 @@
+.add-button{
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+    width:40%;
+    border: none;
+}
+button:focus {
+    outline: none;
+    border: none;
+}

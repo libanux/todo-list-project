@@ -1,0 +1,19 @@
+<div>
+    
+<ul>
+  @for (item of items; track $index) {
+    <li>
+       
+      <input type="checkbox" [checked]="item.checked" >
+      <span>{{ item.name }}</span>
+      <div class="image-container">
+      <img src="assets/edit.png"  alt="edit">
+      <img src="assets/trash.png" alt="delete" style="margin-left:10%;">
+    </div>
+    
+    </li>
+  }
+  </ul>
+
+</div>
+  
