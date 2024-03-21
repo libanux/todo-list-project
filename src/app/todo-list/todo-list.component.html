@@ -4,11 +4,11 @@
   @for (item of items; track $index) {
     <li>
        
-      <input type="checkbox" [checked]="item.checked" >
+      <input type="checkbox" [checked]="item.checked" (click)="checkboxChange(item.id)">
       <span>{{ item.name }}</span>
       <div class="image-container">
-      <img src="assets/edit.png"  alt="edit">
-      <img src="assets/trash.png" alt="delete" style="margin-left:10%;">
+      <img src="assets/edit.png" (click)="openPopup()"  alt="edit">
+      <img src="assets/trash.png" (click)="DeleteItem(item.id)" alt="delete" style="margin-left:10%;">
     </div>
     
     </li>

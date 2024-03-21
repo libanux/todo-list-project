@@ -1,0 +1,40 @@
+.border-color{
+    border-color: #6C63FF;
+}
+.input-note{
+    width:80%;
+    margin: 0 auto; 
+}
+.input-note::placeholder {
+    color: #F7F7F7;
+  }
+  
+h2{
+    text-align: center; 
+    padding: 20px;
+}
+
+.note-container {
+    position: relative;
+}
+
+.btn-cancel {
+    
+    color: #6C63FF;
+    border-color: #6C63FF;
+    width: 20%;
+    position: absolute;
+    bottom: 25px;
+    left: 45px;
+    font-weight: bold;
+}
+
+.btn-add {
+    background-color: #6C63FF;
+    color: white;
+    width: 20%;
+    position: absolute;
+    bottom: 25px;
+    right: 45px;
+    font-weight: bold;
+}

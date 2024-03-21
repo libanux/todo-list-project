@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter} from '@angular/core';
+import { Component, Output, EventEmitter, Input} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 
@@ -15,18 +15,18 @@ export class NewNoteComponent {
     console.log('Popup closed');
   }
   
-
-  
   @Output() noteAdded = new EventEmitter<string>();
   note: string = ''; 
 
   addNote() {
-    // console.log('aasa')
     if (this.note.trim() !== '') {
       this.noteAdded.emit(this.note.trim());
       console.log('Value of note:', this.note.trim());
       this.note = '';
+      this.closePopup();
     }
   }
+
+
 
 }
