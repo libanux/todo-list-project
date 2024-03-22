@@ -19,23 +19,18 @@ import { NewNoteComponent } from './new-note/new-note.component';
 
 export class AppComponent {
   title = 'TodoListProject';
-  // pageTitle: string = 'Your Page Title';
-  // constructor(private modalService: NgbModal) {
-  // }
 
-  // public open(modal: any): void {
-  //   this.modalService.open(modal);
-  // }
+  searchQuery: string = '';
 
-  searchResults: any[] = [];
-  performSearch(query: string): void {
-    
-    this.searchResults = [
-      { id: 1, name: 'Result 1' },
-      { id: 2, name: 'Result 2' },
-      
-    ];
-  }
+  // Method to receive search query from child component
+  receiveSearchQuery(query: string) {
+    this.searchQuery = query;
+    console.log('Received search query in parent:', this.searchQuery);
+}
+
+
+
+
 
 
   //type of selected value
@@ -54,6 +49,7 @@ export class AppComponent {
   }
 
   receivedNote: string = '';
+  
 
   receiveNoteFromChild(note: string) {
     this.receivedNote = note;
