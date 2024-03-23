@@ -2,12 +2,7 @@
 
 <div class="container d-flex justify-content-center">
   <div class="input-group mb-3" style="width: 90%;">
-    <input type="text" class="form-control border-color" placeholder="Search note ...">
-    <!-- <div class="input-group-append">
-         <span class="input-group-text" style="background-color: white; border: none;">
-         <i class="bi bi-search"></i>
-      </span>
-    </div> -->
+    <input type="text" class="form-control border-color" placeholder="Search note ..." [(ngModel)]="searchQuery" (input)="onInputChange()">
   </div>
 </div>
 

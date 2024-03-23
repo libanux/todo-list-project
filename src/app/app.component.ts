@@ -20,18 +20,14 @@ import { NewNoteComponent } from './new-note/new-note.component';
 export class AppComponent {
   title = 'TodoListProject';
 
-  searchQuery: string = '';
 
+  //Stores the search query received 
+  searchQuery: string = '';
   // Method to receive search query from child component
   receiveSearchQuery(query: string) {
     this.searchQuery = query;
     console.log('Received search query in parent:', this.searchQuery);
 }
-
-
-
-
-
 
   //type of selected value
   typeSelectedValue: string = 'ALL';
@@ -48,9 +44,8 @@ export class AppComponent {
     console.log('Received mode in parent:', this.LightMode);
   }
 
+  //recevied added note from add button
   receivedNote: string = '';
-  
-
   receiveNoteFromChild(note: string) {
     this.receivedNote = note;
     console.log('Received note in parent:', this.receivedNote);

@@ -3,7 +3,7 @@
 <div>
     
 <ul>
-  @for (item of items; track $index) {
+  @for (item of filteredItems; track $index) {
     <li>
        
       <input type="checkbox" [checked]="item.checked" (click)="checkboxChange(item.id)">
@@ -34,7 +34,8 @@
 
 
 
-      <img src="assets/trash.png" (click)="DeleteItem(item.id)" alt="delete" style="margin-left:10%;">
+      <img src="assets/trash.png" (click)="DeleteItem(item.id); DeletefilteredItem(item.id)" alt="delete" style="margin-left:10%;">
+
     </div>
     
     </li>
